@@ -1,0 +1,22 @@
+{
+    "type": "TrackInfo",
+    "id": "cicle",
+    "round_distance": 48,
+    "row": 40,
+    "column": 40,
+    "start_line": {
+        "type": "MarkLine",
+        "y_start": 1,
+        "y_end": 12,
+        "x_start": 20,
+        "x_end": 21
+    },
+    "finish_line": {
+        "type": "MarkLine",
+        "y_start": 1,
+        "y_end": 12,
+        "x_start": 19,
+        "x_end": 20
+    },
+    "time_interval": 100
+}

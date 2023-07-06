@@ -1,0 +1,22 @@
+{
+    "type": "TrackInfo",
+    "id": "sshape",
+    "round_distance": 78,
+    "row": 18,
+    "column": 31,
+    "start_line": {
+        "type": "MarkLine",
+        "y_start": 2,
+        "y_end": 4,
+        "x_start": 21,
+        "x_end": 22
+    },
+    "finish_line": {
+        "type": "MarkLine",
+        "y_start": 2,
+        "y_end": 4,
+        "x_start": 20,
+        "x_end": 21
+    },
+    "time_interval": 100
+}

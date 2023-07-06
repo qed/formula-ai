@@ -1,0 +1,101 @@
+{
+    "type": "RaceInfo",
+    "name": "SampleRace1",
+    "id": "SampleRace1_20230618_164810",
+    "track_info": {
+        "type": "TrackInfo",
+        "id": "sample_track_field_2",
+        "round_distance": 28,
+        "row": 20,
+        "column": 30,
+        "start_line": {
+            "type": "MarkLine",
+            "y_start": 4,
+            "y_end": 7,
+            "x_start": 14,
+            "x_end": 15
+        },
+        "finish_line": {
+            "type": "MarkLine",
+            "y_start": 4,
+            "y_end": 7,
+            "x_start": 13,
+            "x_end": 14
+        },
+        "time_interval": 100
+    },
+    "round_to_finish": 10,
+    "model_info": {
+        "type": "ModelInfo",
+        "name": "generic-hc",
+        "version": "2023.5.18"
+    },
+    "car_info": {
+        "type": "CarInfo",
+        "id": 1024,
+        "team": "kirin",
+        "city": "",
+        "state": "",
+        "region": ""
+    },
+    "car_config": {
+        "type": "CarConfig",
+        "rotation_friction": {
+            "type": "RotationFriction",
+            "min_accel_start": 2,
+            "friction": 0.5
+        },
+        "slide_friction": {
+            "type": "SlideFriction",
+            "min_velocity_start": 4,
+            "friction": 2
+        },
+        "motion_profile": {
+            "type": "MotionProfile",
+            "max_acceleration": 5,
+            "max_velocity": 50,
+            "max_angular_velocity": 1.5707963267948966
+        }
+    },
+    "start_state": {
+        "type": "CarState",
+        "timestamp": 0,
+        "wheel_angle": 0,
+        "velocity_x": 0,
+        "velocity_y": 0,
+        "position": {
+            "type": "Point2D",
+            "x": 14.5,
+            "y": 5.5
+        },
+        "last_road_position": {
+            "type": "Point2D",
+            "x": 14.5,
+            "y": 5.5
+        },
+        "round_count": 0,
+        "track_state": {
+            "type": "TrackState",
+            "velocity_forward": 0.0,
+            "velocity_right": 0.0,
+            "rays": [
+                13.5,
+                1.5,
+                1.5,
+                4.949747468305833,
+                17.67766952966369,
+                9.200333702485349,
+                14.612294703947319,
+                1.6235883004385907,
+                1.6235883004385907
+            ],
+            "tile_type": 1,
+            "tile_distance": 0,
+            "tile_total_distance": 0,
+            "last_road_tile_distance": 0,
+            "last_road_tile_total_distance": 0,
+            "score": 0.0
+        }
+    },
+    "max_time_to_finish": 5000000
+}

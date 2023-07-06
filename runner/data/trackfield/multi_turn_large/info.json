@@ -1,0 +1,22 @@
+{
+    "type": "TrackInfo",
+    "id": "multi_turn_large",
+    "round_distance": 390,
+    "row": 70,
+    "column": 120,
+    "start_line": {
+        "type": "MarkLine",
+        "y_start": 1,
+        "y_end": 10,
+        "x_start": 60,
+        "x_end": 61
+    },
+    "finish_line": {
+        "type": "MarkLine",
+        "y_start": 1,
+        "y_end": 10,
+        "x_start": 59,
+        "x_end": 60
+    },
+    "time_interval": 100
+}

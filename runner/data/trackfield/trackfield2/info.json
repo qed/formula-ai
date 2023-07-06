@@ -1,0 +1,22 @@
+{
+    "type": "TrackInfo",
+    "id": "trackfield2",
+    "round_distance": 28,
+    "row": 20,
+    "column": 30,
+    "start_line": {
+        "type": "MarkLine",
+        "y_start": 4,
+        "y_end": 7,
+        "x_start": 14,
+        "x_end": 15
+    },
+    "finish_line": {
+        "type": "MarkLine",
+        "y_start": 4,
+        "y_end": 7,
+        "x_start": 13,
+        "x_end": 14
+    },
+    "time_interval": 100
+}
