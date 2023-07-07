@@ -16,7 +16,7 @@ class CarElement:
     def __init__(self, graph, scale):
         self.graph = graph
         self.scale = scale
-        self.radius = scale/2
+        self.radius = 12
 
     def show_step(self, step_data):
         position_x, position_y, angle = Viewer.get_step_fields(step_data)
@@ -27,11 +27,11 @@ class CarElement:
             line_color='blue'
         )
 
-        angle_x = math.cos(angle) + position_x
-        angle_y = math.sin(angle) + position_y
+        angle_x = math.cos(angle) * self.radius * 2 + position_x * self.scale
+        angle_y = math.sin(angle) * self.radius * 2 + position_y * self.scale
         self.angle_figure = self.graph.DrawLine(
             [position_x * self.scale, position_y * self.scale],
-            [angle_x * self.scale, angle_y * self.scale],
+            [angle_x, angle_y],
             color = 'white', 
             width = 2
         )
@@ -47,11 +47,11 @@ class CarElement:
         )
 
         self.graph.delete_figure(self.angle_figure)
-        angle_x = math.cos(angle) + position_x
-        angle_y = math.sin(angle) + position_y
+        angle_x = math.cos(angle) * self.radius * 2 + position_x * self.scale
+        angle_y = math.sin(angle) * self.radius * 2 + position_y * self.scale
         self.angle_figure = self.graph.DrawLine(
             [position_x * self.scale, position_y * self.scale],
-            [angle_x * self.scale, angle_y * self.scale],
+            [angle_x, angle_y],
             color = 'white', 
             width = 2
         )
@@ -67,8 +67,8 @@ class Viewer:
         self.init_components()
 
     def init_config(self):
-        self.window_width = 1600           
-        self.window_height = 900	
+        self.window_width = 960           
+        self.window_height = 640	
         self.scale = 20
         self.step_rate = 1
         self.show_cell = True
@@ -89,7 +89,7 @@ class Viewer:
         else:
             self.scale = scale_y
         
-        self.text_step = int(20.0/self.scale+.4999)
+        self.text_step = int(30.0/self.scale)
         if self.text_step < 1:
             self.text_step = 1
 
@@ -116,10 +116,9 @@ class Viewer:
             )
 
         self.layout = [
-            [sg.Text(race_data.race_info.id, text_color='white', font=('Helvetica', 25))],
+            [sg.Text(race_data.race_info.id, text_color='white', font=('Helvetica', 20))],
             [self.graph],
-            [sg.Text('0'), sg.ProgressBar(max_value=self.steps_data.shape[0], orientation='h', size=(20, 20), key='progress_bar'), sg.Text(self.steps_data.shape[0])],
-            [sg.Button('Play'), sg.Button('-'), sg.Text('0', key='at_step'), sg.Button('+'), sg.Exit()],
+            [sg.Button('Play'), sg.Text('0'), sg.ProgressBar(max_value=self.steps_data.shape[0], orientation='h', size=(20, 20), key='progress_bar'), sg.Text(self.steps_data.shape[0]), sg.Button('-'), sg.Text('0', key='at_step'), sg.Button('+'), sg.Exit()],
             [table],
             ]
         
